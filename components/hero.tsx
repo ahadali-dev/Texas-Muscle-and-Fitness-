@@ -28,10 +28,10 @@ export default function Hero() {
             <span className="h-px w-6 bg-brand sm:w-8" />
             San Antonio · Open 24/7
           </p>
-          <h1 className="font-display text-[clamp(2.75rem,9vw,6rem)] font-bold uppercase leading-[0.95] tracking-tight">
-            24 hours.
+          <h1 className="font-display text-[clamp(2.25rem,6.5vw,4.5rem)] font-bold uppercase leading-[0.98] tracking-tight">
+            A gym that
             <br />
-            <span className="text-brand">Zero excuses.</span>
+            <span className="text-brand">fits your day.</span>
           </h1>
           <p className="mt-5 max-w-lg text-base text-muted sm:mt-6 sm:text-lg">
             A 24/7 open gym facility for all types of training and all types of
