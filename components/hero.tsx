@@ -33,9 +33,9 @@ export default function Hero() {
             <br />
             <span className="text-brand">Zero excuses.</span>
           </h1>
-          <p className="mt-5 max-w-md text-base text-muted sm:mt-6 sm:text-lg">
-            Real equipment. Real coaches. San Antonio&rsquo;s 24/7 gym off Loop
-            1604.
+          <p className="mt-5 max-w-lg text-base text-muted sm:mt-6 sm:text-lg">
+            A 24/7 open gym facility for all types of training and all types of
+            goals.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
             <a
