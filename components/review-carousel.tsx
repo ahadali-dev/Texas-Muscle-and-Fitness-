@@ -84,7 +84,7 @@ export default function ReviewCarousel() {
         {reviews.map((review) => (
           <article
             key={review.name + review.when}
-            className="group flex w-[85%] shrink-0 snap-start flex-col rounded-sm border border-line bg-ink-card p-8 transition-colors hover:border-brand/60 sm:w-[calc((100%-1.5rem)/2)] lg:w-[calc((100%-3rem)/3)]"
+            className="group flex w-[85%] shrink-0 snap-start flex-col rounded-sm border border-line bg-ink-card p-8 transition-all duration-500 hover:-translate-y-1 hover:border-brand/60 hover:shadow-[0_18px_40px_-24px] hover:shadow-brand/60 sm:w-[calc((100%-1.5rem)/2)] lg:w-[calc((100%-3rem)/3)]"
           >
             <div className="flex items-center gap-4">
               <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand font-display text-lg font-bold text-white">

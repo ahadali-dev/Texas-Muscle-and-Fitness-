@@ -1,3 +1,4 @@
+import CountUp from "@/components/count-up";
 import Reveal from "@/components/reveal";
 import { stats } from "@/lib/site";
 
@@ -8,7 +9,7 @@ export default function ProofStrip() {
         {stats.map((stat, i) => (
           <Reveal key={stat.label} delay={i * 80} className="text-center">
             <div className="font-display text-3xl font-bold sm:text-4xl">
-              {stat.num}
+              <CountUp value={stat.num} />
             </div>
             <div className="mt-1 text-sm text-muted">{stat.label}</div>
           </Reveal>

@@ -18,7 +18,7 @@ export default function Services() {
             <Reveal
               key={service.title}
               delay={i * 100}
-              className="group bg-ink transition-colors hover:bg-ink-card"
+              className="group bg-ink transition-all duration-500 hover:-translate-y-1 hover:bg-ink-card"
             >
               <div className="relative h-48 overflow-hidden">
                 <Image
@@ -26,12 +26,13 @@ export default function Services() {
                   alt={service.title}
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="object-cover transition-transform duration-[1.2s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/30 to-transparent" />
               </div>
               <div className="p-7 sm:p-9">
-                <p className="mb-4 text-sm font-semibold text-brand">
+                <p className="mb-4 flex items-center gap-2 text-sm font-semibold text-brand">
+                  <span className="h-px w-0 bg-brand transition-all duration-500 group-hover:w-6" />
                   {service.tag}
                 </p>
                 <h3 className="font-display text-xl font-bold">

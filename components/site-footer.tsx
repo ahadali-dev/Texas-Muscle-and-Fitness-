@@ -1,3 +1,4 @@
+import SocialLinks from "@/components/social-links";
 import { navLinks, site } from "@/lib/site";
 
 export default function SiteFooter() {
@@ -14,6 +15,7 @@ export default function SiteFooter() {
               <br />
               {site.address.line2}
             </p>
+            <SocialLinks className="mt-5" />
           </div>
           <div>
             <h4 className="mb-3 text-sm font-semibold">Contact</h4>

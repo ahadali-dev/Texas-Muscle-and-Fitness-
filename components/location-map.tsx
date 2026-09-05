@@ -1,5 +1,6 @@
 import Reveal from "@/components/reveal";
 import SectionHead from "@/components/section-head";
+import SocialLinks from "@/components/social-links";
 import { mapConfig, site } from "@/lib/site";
 
 const embedSrc = `https://maps.google.com/maps?q=${mapConfig.lat},${mapConfig.lng}&z=${mapConfig.zoom}&output=embed`;
@@ -46,7 +47,7 @@ export default function LocationMap() {
               href={mapConfig.directionsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-9 inline-flex items-center gap-2 rounded-sm bg-brand px-6 py-3.5 font-semibold text-white transition-colors hover:bg-brand-dark"
+              className="sheen group mt-9 inline-flex items-center gap-2 rounded-sm bg-brand px-6 py-3.5 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-dark"
             >
               Get Directions
               <svg
@@ -54,7 +55,7 @@ export default function LocationMap() {
                 fill="none"
                 stroke="currentColor"
                 strokeWidth={2}
-                className="h-4 w-4"
+                className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                 aria-hidden
               >
                 <path
@@ -64,6 +65,8 @@ export default function LocationMap() {
                 />
               </svg>
             </a>
+
+            <SocialLinks className="mt-8" />
           </div>
 
           <div className="relative min-h-[22rem] bg-ink-soft lg:min-h-[30rem]">

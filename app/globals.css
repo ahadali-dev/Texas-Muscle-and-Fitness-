@@ -44,3 +44,128 @@ body {
     scroll-behavior: auto;
   }
 }
+
+/* ---------------------------------------------------------------
+   Motion
+   --------------------------------------------------------------- */
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 28px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes ken-burns {
+  from {
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+  to {
+    transform: scale(1.12) translate3d(0, -1.5%, 0);
+  }
+}
+
+@keyframes line-grow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* Entrance: staggered with inline animation-delay */
+.anim-up {
+  opacity: 0;
+  animation: fade-up 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.anim-in {
+  opacity: 0;
+  animation: fade-in 1.2s ease forwards;
+}
+
+/* Slow drift on the hero photograph */
+.anim-kenburns {
+  animation: ken-burns 26s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+/* Red rule that draws itself in */
+.anim-rule {
+  transform-origin: left;
+  animation: line-grow 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Light sweep across a button on hover */
+.sheen {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.sheen::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    115deg,
+    transparent 25%,
+    rgba(255, 255, 255, 0.22) 50%,
+    transparent 75%
+  );
+  transform: translateX(-130%);
+  transition: transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.sheen:hover::after {
+  transform: translateX(130%);
+}
+
+/* Nav link underline that wipes in from the left */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 1px;
+  width: 100%;
+  background: var(--color-brand);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.nav-link:hover::after,
+.nav-link:focus-visible::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .anim-up,
+  .anim-in,
+  .anim-kenburns,
+  .anim-rule {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  .sheen::after {
+    display: none;
+  }
+}

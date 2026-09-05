@@ -14,6 +14,13 @@ export const site = {
   facebookRecommends: 268,
 };
 
+export const socials = [
+  {
+    label: "Facebook",
+    href: "https://www.facebook.com/TexasMuscleandFitness/photos",
+  },
+];
+
 export const navLinks = [
   { label: "Training", href: "#services" },
   { label: "Facility", href: "#facility" },

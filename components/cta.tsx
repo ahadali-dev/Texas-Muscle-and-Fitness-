@@ -13,7 +13,7 @@ export default function Cta() {
         </p>
         <a
           href={site.phoneHref}
-          className="mt-9 inline-block rounded-sm bg-black px-8 py-4 font-semibold text-chalk transition-transform hover:-translate-y-0.5"
+          className="sheen mt-9 inline-block rounded-sm bg-black px-8 py-4 font-semibold text-chalk transition-transform duration-300 hover:-translate-y-0.5"
         >
           Call {site.phone}
         </a>
